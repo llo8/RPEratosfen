@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCA35A4C1ED96D450034E5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A4B1ED96D450034E5F4 /* AppDelegate.swift */; };
+		DCA35A511ED96D450034E5F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA35A4F1ED96D450034E5F4 /* Main.storyboard */; };
+		DCA35A531ED96D450034E5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA35A521ED96D450034E5F4 /* Assets.xcassets */; };
+		DCA35A561ED96D450034E5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA35A541ED96D450034E5F4 /* LaunchScreen.storyboard */; };
+		DCA35A611ED96D450034E5F4 /* RPEratosfenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A601ED96D450034E5F4 /* RPEratosfenTests.swift */; };
+		DCA35A8C1ED971FB0034E5F4 /* EratosfenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A861ED971FB0034E5F4 /* EratosfenConfigurator.swift */; };
+		DCA35A8D1ED971FB0034E5F4 /* EratosfenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A861ED971FB0034E5F4 /* EratosfenConfigurator.swift */; };
+		DCA35A8F1ED971FB0034E5F4 /* EratosfenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A871ED971FB0034E5F4 /* EratosfenInteractor.swift */; };
+		DCA35A901ED971FB0034E5F4 /* EratosfenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A871ED971FB0034E5F4 /* EratosfenInteractor.swift */; };
+		DCA35A921ED971FB0034E5F4 /* EratosfenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A881ED971FB0034E5F4 /* EratosfenModels.swift */; };
+		DCA35A931ED971FB0034E5F4 /* EratosfenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A881ED971FB0034E5F4 /* EratosfenModels.swift */; };
+		DCA35A951ED971FB0034E5F4 /* EratosfenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A891ED971FB0034E5F4 /* EratosfenPresenter.swift */; };
+		DCA35A961ED971FB0034E5F4 /* EratosfenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A891ED971FB0034E5F4 /* EratosfenPresenter.swift */; };
+		DCA35A981ED971FB0034E5F4 /* EratosfenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A8A1ED971FB0034E5F4 /* EratosfenRouter.swift */; };
+		DCA35A991ED971FB0034E5F4 /* EratosfenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A8A1ED971FB0034E5F4 /* EratosfenRouter.swift */; };
+		DCA35A9B1ED971FB0034E5F4 /* EratosfenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A8B1ED971FB0034E5F4 /* EratosfenViewController.swift */; };
+		DCA35A9C1ED971FB0034E5F4 /* EratosfenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A8B1ED971FB0034E5F4 /* EratosfenViewController.swift */; };
+		DCA35A9F1ED98EF60034E5F4 /* EratosfenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A9E1ED98EF60034E5F4 /* EratosfenWorker.swift */; };
+		DCA35AA01ED98EF60034E5F4 /* EratosfenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35A9E1ED98EF60034E5F4 /* EratosfenWorker.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCA35A5D1ED96D450034E5F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCA35A401ED96D450034E5F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCA35A471ED96D450034E5F4;
+			remoteInfo = RPEratosfen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCA35A481ED96D450034E5F4 /* RPEratosfen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPEratosfen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA35A4B1ED96D450034E5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCA35A501ED96D450034E5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCA35A521ED96D450034E5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCA35A551ED96D450034E5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCA35A571ED96D450034E5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA35A5C1ED96D450034E5F4 /* RPEratosfenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPEratosfenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA35A601ED96D450034E5F4 /* RPEratosfenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPEratosfenTests.swift; sourceTree = "<group>"; };
+		DCA35A621ED96D450034E5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA35A861ED971FB0034E5F4 /* EratosfenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EratosfenConfigurator.swift; sourceTree = "<group>"; };
+		DCA35A871ED971FB0034E5F4 /* EratosfenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EratosfenInteractor.swift; sourceTree = "<group>"; };
+		DCA35A881ED971FB0034E5F4 /* EratosfenModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EratosfenModels.swift; sourceTree = "<group>"; };
+		DCA35A891ED971FB0034E5F4 /* EratosfenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EratosfenPresenter.swift; sourceTree = "<group>"; };
+		DCA35A8A1ED971FB0034E5F4 /* EratosfenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EratosfenRouter.swift; sourceTree = "<group>"; };
+		DCA35A8B1ED971FB0034E5F4 /* EratosfenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EratosfenViewController.swift; sourceTree = "<group>"; };
+		DCA35A9E1ED98EF60034E5F4 /* EratosfenWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EratosfenWorker.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCA35A451ED96D450034E5F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA35A591ED96D450034E5F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCA35A3F1ED96D450034E5F4 = {
+			isa = PBXGroup;
+			children = (
+				DCA35A4A1ED96D450034E5F4 /* RPEratosfen */,
+				DCA35A5F1ED96D450034E5F4 /* RPEratosfenTests */,
+				DCA35A491ED96D450034E5F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCA35A491ED96D450034E5F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCA35A481ED96D450034E5F4 /* RPEratosfen.app */,
+				DCA35A5C1ED96D450034E5F4 /* RPEratosfenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA35A4A1ED96D450034E5F4 /* RPEratosfen */ = {
+			isa = PBXGroup;
+			children = (
+				DCA35A791ED96DE60034E5F4 /* Scenes */,
+				DCA35A4B1ED96D450034E5F4 /* AppDelegate.swift */,
+				DCA35A4F1ED96D450034E5F4 /* Main.storyboard */,
+				DCA35A521ED96D450034E5F4 /* Assets.xcassets */,
+				DCA35A541ED96D450034E5F4 /* LaunchScreen.storyboard */,
+				DCA35A571ED96D450034E5F4 /* Info.plist */,
+			);
+			path = RPEratosfen;
+			sourceTree = "<group>";
+		};
+		DCA35A5F1ED96D450034E5F4 /* RPEratosfenTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCA35A601ED96D450034E5F4 /* RPEratosfenTests.swift */,
+				DCA35A621ED96D450034E5F4 /* Info.plist */,
+			);
+			path = RPEratosfenTests;
+			sourceTree = "<group>";
+		};
+		DCA35A791ED96DE60034E5F4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DCA35A861ED971FB0034E5F4 /* EratosfenConfigurator.swift */,
+				DCA35A871ED971FB0034E5F4 /* EratosfenInteractor.swift */,
+				DCA35A881ED971FB0034E5F4 /* EratosfenModels.swift */,
+				DCA35A891ED971FB0034E5F4 /* EratosfenPresenter.swift */,
+				DCA35A8A1ED971FB0034E5F4 /* EratosfenRouter.swift */,
+				DCA35A8B1ED971FB0034E5F4 /* EratosfenViewController.swift */,
+				DCA35A9E1ED98EF60034E5F4 /* EratosfenWorker.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCA35A471ED96D450034E5F4 /* RPEratosfen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA35A701ED96D450034E5F4 /* Build configuration list for PBXNativeTarget "RPEratosfen" */;
+			buildPhases = (
+				DCA35A441ED96D450034E5F4 /* Sources */,
+				DCA35A451ED96D450034E5F4 /* Frameworks */,
+				DCA35A461ED96D450034E5F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RPEratosfen;
+			productName = RPEratosfen;
+			productReference = DCA35A481ED96D450034E5F4 /* RPEratosfen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCA35A5B1ED96D450034E5F4 /* RPEratosfenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA35A731ED96D450034E5F4 /* Build configuration list for PBXNativeTarget "RPEratosfenTests" */;
+			buildPhases = (
+				DCA35A581ED96D450034E5F4 /* Sources */,
+				DCA35A591ED96D450034E5F4 /* Frameworks */,
+				DCA35A5A1ED96D450034E5F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCA35A5E1ED96D450034E5F4 /* PBXTargetDependency */,
+			);
+			name = RPEratosfenTests;
+			productName = RPEratosfenTests;
+			productReference = DCA35A5C1ED96D450034E5F4 /* RPEratosfenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCA35A401ED96D450034E5F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Юрий";
+				TargetAttributes = {
+					DCA35A471ED96D450034E5F4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N37843338H;
+						ProvisioningStyle = Automatic;
+					};
+					DCA35A5B1ED96D450034E5F4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DCA35A471ED96D450034E5F4;
+					};
+				};
+			};
+			buildConfigurationList = DCA35A431ED96D450034E5F4 /* Build configuration list for PBXProject "RPEratosfen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCA35A3F1ED96D450034E5F4;
+			productRefGroup = DCA35A491ED96D450034E5F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCA35A471ED96D450034E5F4 /* RPEratosfen */,
+				DCA35A5B1ED96D450034E5F4 /* RPEratosfenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCA35A461ED96D450034E5F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA35A561ED96D450034E5F4 /* LaunchScreen.storyboard in Resources */,
+				DCA35A531ED96D450034E5F4 /* Assets.xcassets in Resources */,
+				DCA35A511ED96D450034E5F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA35A5A1ED96D450034E5F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCA35A441ED96D450034E5F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA35A9F1ED98EF60034E5F4 /* EratosfenWorker.swift in Sources */,
+				DCA35A981ED971FB0034E5F4 /* EratosfenRouter.swift in Sources */,
+				DCA35A921ED971FB0034E5F4 /* EratosfenModels.swift in Sources */,
+				DCA35A951ED971FB0034E5F4 /* EratosfenPresenter.swift in Sources */,
+				DCA35A8C1ED971FB0034E5F4 /* EratosfenConfigurator.swift in Sources */,
+				DCA35A8F1ED971FB0034E5F4 /* EratosfenInteractor.swift in Sources */,
+				DCA35A9B1ED971FB0034E5F4 /* EratosfenViewController.swift in Sources */,
+				DCA35A4C1ED96D450034E5F4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA35A581ED96D450034E5F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA35A991ED971FB0034E5F4 /* EratosfenRouter.swift in Sources */,
+				DCA35AA01ED98EF60034E5F4 /* EratosfenWorker.swift in Sources */,
+				DCA35A8D1ED971FB0034E5F4 /* EratosfenConfigurator.swift in Sources */,
+				DCA35A961ED971FB0034E5F4 /* EratosfenPresenter.swift in Sources */,
+				DCA35A901ED971FB0034E5F4 /* EratosfenInteractor.swift in Sources */,
+				DCA35A611ED96D450034E5F4 /* RPEratosfenTests.swift in Sources */,
+				DCA35A9C1ED971FB0034E5F4 /* EratosfenViewController.swift in Sources */,
+				DCA35A931ED971FB0034E5F4 /* EratosfenModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCA35A5E1ED96D450034E5F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCA35A471ED96D450034E5F4 /* RPEratosfen */;
+			targetProxy = DCA35A5D1ED96D450034E5F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCA35A4F1ED96D450034E5F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA35A501ED96D450034E5F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCA35A541ED96D450034E5F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA35A551ED96D450034E5F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCA35A6E1ED96D450034E5F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DCA35A6F1ED96D450034E5F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCA35A711ED96D450034E5F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N37843338H;
+				INFOPLIST_FILE = RPEratosfen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.llo8.RPEratosfen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DCA35A721ED96D450034E5F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N37843338H;
+				INFOPLIST_FILE = RPEratosfen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.llo8.RPEratosfen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DCA35A741ED96D450034E5F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RPEratosfenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.llo8.RPEratosfenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPEratosfen.app/RPEratosfen";
+			};
+			name = Debug;
+		};
+		DCA35A751ED96D450034E5F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RPEratosfenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.llo8.RPEratosfenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPEratosfen.app/RPEratosfen";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCA35A431ED96D450034E5F4 /* Build configuration list for PBXProject "RPEratosfen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA35A6E1ED96D450034E5F4 /* Debug */,
+				DCA35A6F1ED96D450034E5F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA35A701ED96D450034E5F4 /* Build configuration list for PBXNativeTarget "RPEratosfen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA35A711ED96D450034E5F4 /* Debug */,
+				DCA35A721ED96D450034E5F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCA35A731ED96D450034E5F4 /* Build configuration list for PBXNativeTarget "RPEratosfenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA35A741ED96D450034E5F4 /* Debug */,
+				DCA35A751ED96D450034E5F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCA35A401ED96D450034E5F4 /* Project object */;
+}
