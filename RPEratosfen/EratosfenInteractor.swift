@@ -35,7 +35,7 @@ class EratosfenInteractor: EratosfenInteractorInput, EratosfenDataSource, Eratos
     
     internal func eratosfen(number: Int) {
         DispatchQueue.global(qos: .utility).async {
-            EratosfenWorker().eratosfen(number: number, completionHandler: {(primes: [Int]) -> Void in
+            EratosfenWorker().eratosfenWheelFactorization(number: number, completionHandler: {(primes: [Int]) -> Void in
                 DispatchQueue.main.async {
                     self.output?.presentPrimes(primes: primes)
                     self.output?.presentSumPrimes(primes: primes)
