@@ -55,7 +55,13 @@ class EratosfenViewController: UIViewController, EratosfenViewControllerInput, U
         
         let number = Int(numberTextField.text!)
         if (number != nil) {
-            output?.eratosfen(number: number!)
+            if number! >= 2 {
+                output?.eratosfen(number: number!)
+            } else {
+                let alert = UIAlertController.init(title: nil, message: "Введите число больше 2", preferredStyle: .alert)
+                alert.addAction(UIAlertAction.init(title: "Ok", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         } else {
             let alert = UIAlertController.init(title: nil, message: "Введите число", preferredStyle: .alert)
             alert.addAction(UIAlertAction.init(title: "Ok", style: .cancel, handler: nil))

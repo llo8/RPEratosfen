@@ -24,14 +24,16 @@ class EratosfenWorker {
         
         var k = 3
         while k * k <= number {
-            if S[k] {
-                var l = k * k
-                while l <= number {
-                    S[l] = false
-                    l += 2 * k
-                }
+            var l = k * k
+            
+            while l <= number {
+                S[l] = false
+                l += 2 * k
             }
-            k += 2
+            
+            repeat {
+                k += 2
+            } while (!S[k])
         }
         
         var result: [Int] = [2]
@@ -76,7 +78,7 @@ class EratosfenWorker {
                 if S[j].first != nil && S[j].first! {
                     result.append(Int(30 * i + fprimes[j]))
                 }
-                S[j].remove(at: 0)
+                S[j].removeFirst()
             }
         }
         
