@@ -11,12 +11,12 @@
 import UIKit
 
 protocol EratosfenViewControllerInput {
-    func displaySumPrimes(sumPrimes: Int)
+    func displaySumPrimes(sumPrimes: UInt)
     func displayPrimes(primes: String)
 }
 
 protocol EratosfenViewControllerOutput {
-    func eratosfen(number: Int)
+    func eratosfen(number: UInt)
 }
 
 class EratosfenViewController: UIViewController, EratosfenViewControllerInput, UITextFieldDelegate {
@@ -53,9 +53,12 @@ class EratosfenViewController: UIViewController, EratosfenViewControllerInput, U
         button.isEnabled = false
         loading.startAnimating()
         
-        let number = Int(numberTextField.text!)
+        let number = UInt(numberTextField.text!)
         if (number != nil) {
             if number! >= 2 {
+                primeNumbersView.text = ""
+                sumPrimesTextField.text = ""
+                
                 output?.eratosfen(number: number!)
             } else {
                 let alert = UIAlertController.init(title: nil, message: "Введите число больше 2", preferredStyle: .alert)
@@ -71,7 +74,7 @@ class EratosfenViewController: UIViewController, EratosfenViewControllerInput, U
     
     // MARK: Display logic
     
-    internal func displaySumPrimes(sumPrimes: Int) {
+    internal func displaySumPrimes(sumPrimes: UInt) {
         loading.stopAnimating()
         button.isEnabled = true
         sumPrimesTextField.text = String(sumPrimes)

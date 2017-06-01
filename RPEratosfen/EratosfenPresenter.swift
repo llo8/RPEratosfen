@@ -9,12 +9,12 @@
 //  https://github.com/HelmMobile/clean-swift-templates
 
 protocol EratosfenPresenterInput {
-    func presentSumPrimes(primes: [Int])
-    func presentPrimes(primes: [Int])
+    func presentSumPrimes(primes: [UInt])
+    func presentPrimes(primes: [UInt])
 }
 
 protocol EratosfenPresenterOutput: class {
-    func displaySumPrimes(sumPrimes: Int)
+    func displaySumPrimes(sumPrimes: UInt)
     func displayPrimes(primes: String)
 }
 
@@ -24,7 +24,7 @@ class EratosfenPresenter: EratosfenPresenterInput {
     
     // MARK: Presentation logic
     
-    internal func presentPrimes(primes: [Int]) {
+    internal func presentPrimes(primes: [UInt]) {
         var primesString = ""
         for prime in primes {
             primesString += String(prime) + "\n"
@@ -32,10 +32,12 @@ class EratosfenPresenter: EratosfenPresenterInput {
         output?.displayPrimes(primes: primesString)
     }
     
-    internal func presentSumPrimes(primes: [Int]) {
-        var sumPrimes = 0
+    internal func presentSumPrimes(primes: [UInt]) {
+        var sumPrimes: UInt = 0
         for prime in primes {
-            sumPrimes += prime
+            if (UInt.max - prime > sumPrimes) {
+                sumPrimes += prime
+            }
         }
         output?.displaySumPrimes(sumPrimes: sumPrimes)
     }

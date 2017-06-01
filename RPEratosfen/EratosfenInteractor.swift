@@ -11,12 +11,12 @@
 import Foundation
 
 protocol EratosfenInteractorInput {
-    func eratosfen(number: Int)
+    func eratosfen(number: UInt)
 }
 
 protocol EratosfenInteractorOutput {
-    func presentSumPrimes(primes: [Int])
-    func presentPrimes(primes: [Int])
+    func presentSumPrimes(primes: [UInt])
+    func presentPrimes(primes: [UInt])
 }
 
 protocol EratosfenDataSource {
@@ -33,9 +33,10 @@ class EratosfenInteractor: EratosfenInteractorInput, EratosfenDataSource, Eratos
     
     // MARK: Business logic
     
-    internal func eratosfen(number: Int) {
+    internal func eratosfen(number: UInt) {
         DispatchQueue.global(qos: .utility).async {
-            EratosfenWorker().eratosfenWheelFactorization(number: number, completionHandler: {(primes: [Int]) -> Void in
+            EratosfenWorker().eratosfenWheelFactorization(number: number,
+                                                          completionHandler: {(primes: [UInt]) -> Void in
                 DispatchQueue.main.async {
                     self.output?.presentPrimes(primes: primes)
                     self.output?.presentSumPrimes(primes: primes)

@@ -14,7 +14,7 @@ class EratosfenWorker {
     
     // MARK: Business Logic
     
-    func eratosfen(number: Int, completionHandler: @escaping ([Int]) -> Void) {
+    func eratosfen(number: Int, completionHandler: @escaping ([UInt]) -> Void) {
         NSLog("start simple eratosfen")
         var Sieve: [Bool] = [false, false]
         let sqrtNumber = Int(sqrt(Double(number)))
@@ -37,11 +37,11 @@ class EratosfenWorker {
             } while (!Sieve[k])
         }
         
-        var result: [Int] = [2]
+        var result: [UInt] = [2]
         var i = 3
         while i <= number {
             if Sieve[i] {
-                result.append(i)
+                result.append(UInt(i))
             }
             i += 2
         }
@@ -49,91 +49,111 @@ class EratosfenWorker {
         completionHandler(result)
     }
     
-    func eratosfenWheelFactorization(number: Int, completionHandler: @escaping ([Int]) -> Void) {
-        // 3# 2 * 3
-        // let fprimes: [Int] = [1, 5]
-        
+    func eratosfenWheelFactorization(number: UInt,
+                                     completionHandler: @escaping ([UInt]) -> Void) {
+
         // 5# 2 * 3 * 5
-        let fprimes: [Int] = [1, 7, 11, 13, 17, 19, 23, 29]
+        let fprimes: [UInt] = [1, 7, 11, 13, 17, 19, 23, 29]
         
-        let gaps: [[Int]] = [[],
-                             [3,  0,  5,  4,  2,  1,  6,  3],
-                             [4,  6,  0,  8,  2,  10, 4,  6],
-                             [3,  8,  7,  0,  12, 5,  4,  9],
-                             [13, 6,  7,  16, 0,  9,  10, 3],
-                             [12, 8,  18, 4,  14, 0,  10, 6],
-                             [13, 22, 5,  8,  14, 17, 0,  9],
-                             [28, 22, 18, 16, 12, 10, 6,  0]]
+        let gaps: [[UInt]] = [[],
+                              [3,  0,  5,  4,  2,  1,  6,  3],
+                              [4,  6,  0,  8,  2,  10, 4,  6],
+                              [3,  8,  7,  0,  12, 5,  4,  9],
+                              [13, 6,  7,  16, 0,  9,  10, 3],
+                              [12, 8,  18, 4,  14, 0,  10, 6],
+                              [13, 22, 5,  8,  14, 17, 0,  9],
+                              [28, 22, 18, 16, 12, 10, 6,  0]]
+        
+        let countEl: UInt = 10000;
+        
+        var result: [UInt] = []
+        var maxk: [UInt] = []
+        var waitResult = 0
+        let queue = DispatchQueue.init(label: "com.llo8.RPEratosfen.EratosfenResult")
         
         NSLog("start eratosfen wheel factorization")
-        var maxk: [Int] = []
         for i in 0...7 {
-            maxk.append(Int((number - fprimes[i]) / 30))
+            maxk.append(UInt((number - UInt(fprimes[i])) / 30))
         }
         
-        // init sieve
-        var SieveWheelFact: [[Bool]] = []
-        for i in 0...7 {
-            var Sieve: [Bool] = []
-            for _ in 0...maxk[i] {
-                Sieve.append(true)
+        var countStep = maxk.max()! / countEl
+        if countStep * countEl < maxk.max()! {
+            countStep += 1
+        }
+        
+        for step in 0..<countStep {
+            let startIndex = step * countEl
+            
+            var k: [UInt] = []
+            for i in 0...7 {
+               k.append(min(countEl, maxk[i] - startIndex))
             }
-            SieveWheelFact.append(Sieve)
-        }
-        
-//        for i in 1...7 {
-//            for j in 0...7 {
-//                for d in 0...(fprimes[i] - 1) {
-//                    let h = 30 * d + fprimes[j]
-//                    if h % fprimes[i] == 0 {
-//                        print("\(fprimes[i]) \(j) \(d) \(h)")
-//                    }
-//                }
-//            }
-//        }
-        
-        var wait = 0
-        for col1 in 0...7 {
-            wait += 1
-            DispatchQueue.global().async {
-                for col2 in 1...7 {
-                    var row = gaps[col2][col1]
-                    
-                    if row == 0 {
-                        row += fprimes[col2]
+            
+            var SieveWheelFact: [[Bool]] = []
+            for i in 0...7 {
+                var Sieve: [Bool] = []
+                for _ in 0...k[i] {
+                    Sieve.append(true)
+                }
+                SieveWheelFact.append(Sieve)
+            }
+            
+            var wait = 0
+            for col1 in 0...7 {
+                wait += 1
+                DispatchQueue.global().async {
+                    for col2 in 1...7 {
+                        var row = gaps[col2][col1]
+                        
+                        if startIndex > 0 {
+                            row = row + fprimes[col2] - startIndex % fprimes[col2]
+                        } else {
+                            if row == 0 && step == 0 {
+                                row += fprimes[col2]
+                            }
+                        }
+                        
+                        while row <= k[col1] {
+                            SieveWheelFact[col1][Int(row)] = false
+                            row += fprimes[col2]
+                        }
                     }
-                    
-                    while row <= maxk[col1] {
-                        SieveWheelFact[col1][row] = false
-                        row += fprimes[col2]
+                    wait -= 1
+                }
+            }
+            
+            while wait != 0 {
+                sleep(1)
+            }
+            
+            var tmpSieve = SieveWheelFact
+            let index = startIndex
+            let mk = k.max()!
+            waitResult += 1
+            
+            queue.sync {
+                for i in 0...mk {
+                    for j in 0...7 {
+                        if tmpSieve[j].first != nil {
+                            if tmpSieve[j].first! {
+                                result.append(UInt(30 * (i + index) + fprimes[j]))
+                            }
+                            tmpSieve[j].removeFirst()
+                        }
                     }
                 }
-                wait -= 1
+                waitResult -= 1
             }
         }
         
-        while wait != 0 {
+        while waitResult != 0 {
             sleep(1)
-        }
-        
-        var result: [Int] = []
-        for i in 0...maxk.max()! {
-            for j in 0...7 {
-                if SieveWheelFact[j].first != nil {
-                    if SieveWheelFact[j].first! {
-                        result.append(Int(30 * i + fprimes[j]))
-                    }
-                    SieveWheelFact[j].removeFirst()
-                }
-            }
         }
         
         result.removeFirst()
         result.insert(2, at: 0)
         result.insert(3, at: 1)
         result.insert(5, at: 2)
-        
-        SieveWheelFact = []
         
         NSLog("finish eratosfen wheel factorization")
         completionHandler(result)
